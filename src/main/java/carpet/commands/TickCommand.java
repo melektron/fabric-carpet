@@ -32,7 +32,7 @@ public class TickCommand
                 requires((player) -> CommandHelper.canUseCommand(player, CarpetSettings.commandTick)).
                 then(literal("rate").
                         executes((c) -> queryTps(c.getSource())).
-                        then(argument("rate", floatArg(0.1F, 500.0F)).
+                        then(argument("rate", floatArg(0.1F, 10000.0F)).
                                 suggests( (c, b) -> suggest(new String[]{"20.0"},b)).
                                 executes((c) -> setTps(c.getSource(), getFloat(c, "rate"))))).
                 then(literal("warp").
