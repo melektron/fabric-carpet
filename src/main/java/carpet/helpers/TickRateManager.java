@@ -18,12 +18,12 @@ public class TickRateManager
     public void setTickRate(float rate)
     {
         tickrate = rate;
-        long msptt = (long) (1000.0 / tickrate);
-        if (msptt <= 0L)
-        {
-            msptt = 1L;
-            tickrate = 1000.0f;
-        }
+        float msptt = (float)(1000.0 / tickrate);
+        // if (msptt <= 0L)
+        // {
+        //     msptt = 1L;
+        //     tickrate = 1000.0f;
+        // }
         mspt = msptt;
     }
 
